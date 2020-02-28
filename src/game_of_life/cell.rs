@@ -26,9 +26,9 @@ impl Cell {
 impl fmt::Display for Cell {
   fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
     if self.state == States::Dead {
-      write!(f, " ")
+      write!(f, "  ")
     } else {
-      write!(f, "X")
+      write!(f, "X ")
     }
   }
 }
