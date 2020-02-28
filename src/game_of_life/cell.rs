@@ -8,8 +8,8 @@ pub enum States {
 
 #[derive(Clone, PartialEq, Debug)]
 pub struct Cell {
-  state :States,
-  next_state :States,
+  pub state :States,
+  pub next_state :States,
 }
 
 impl Cell {
@@ -39,7 +39,7 @@ mod tests {
   #[test]
   fn create_cell() {
     let mut a = Cell::new();
-    let b = Cell{state: States::Dead,
+    let b = Cell{state: States::Alive,
       next_state: States::Alive,
     };
     a.next_state = States::Alive;
