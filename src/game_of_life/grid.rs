@@ -23,8 +23,12 @@ impl Grid {
     }
   }
   pub fn generate_new_gen(&mut self) {
+    if self.cells.len() < 3 || self.cells[0].len() < 3 {
+      return;
+    }
     self.calculate_new_states();
     self.update();
+    self.gen += 1;
   }
   fn calculate_new_states(&mut self) {
     for i in 1..self.cells.len() - 2 {
